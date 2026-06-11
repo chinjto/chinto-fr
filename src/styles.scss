@@ -1,6 +1,25 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #333333;
+  --light-gray: #243341;
+  --medium-gray: #444444;
+  --gray: #5d5d5d;
+  --dark-text: #414141;
+  --accent: #00a6b5;
+
+  --background: #101820;
+  --surface: #18242d;
+  --heading: #ffffff;
+  --text: #d7dee5;
+  --muted: #9aa8b3;
+}
+
 html,
 body {
   margin: 0;
   min-height: 100%;
-  background: #101820;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }

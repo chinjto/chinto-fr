@@ -1,111 +1,19 @@
 <main class="page">
-  <section class="hero">
-    <p class="eyebrow">Développeur • Geek • Japonophile</p>
-
-    <h1>Chinto</h1>
-
-    <p class="intro">
-      Développeur Java depuis plus de 12 ans, passionné par la tech,
-      les jeux vidéo, les mangas, Linux et les voyages.
-      Bienvenue dans mon coin d'Internet.
-    </p>
-
-    <div class="actions">
-      <a href="https://github.com/chinjto" class="button">GitHub</a>
-      <a href="mailto:contact@chinto.fr" class="link">contact@chinto.fr</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Centres d'intérêt</h2>
-
-    <div class="tags">
-      <span>Java</span>
-      <span>Linux</span>
-      <span>Open Source</span>
-      <span>Jeux vidéo</span>
-      <span>Mangas</span>
-      <span>Animés</span>
-      <span>Japon</span>
-      <span>Voyages</span>
-      <span>Lecture</span>
-      <span>Veille Tech</span>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>En ce moment</h2>
-
-    <div class="cards">
-      <article>
-        <h3>🇮🇪 Irlande</h3>
-        <p>
-          Installation en Irlande et découverte de nouvelles opportunités
-          professionnelles et personnelles.
-        </p>
-      </article>
-
-      <article>
-        <h3>🇯🇵 Japon</h3>
-        <p>
-          Apprentissage du japonais et préparation d'un futur projet
-          d'expatriation.
-        </p>
-      </article>
-
-      <article>
-        <h3>💻 Projets personnels</h3>
-        <p>
-          Développement d'outils, expérimentations web, Linux,
-          automatisation et projets open source.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Bientôt sur le blog</h2>
-
-    <div class="cards">
-      <article>
-        <h3>Tech</h3>
-        <p>
-          Veille technologique, Java, Angular, Linux,
-          architecture logicielle et retour d'expérience.
-        </p>
-      </article>
-
-      <article>
-        <h3>Gaming</h3>
-        <p>
-          Jeux vidéo, LAN entre amis, jeux coopératifs
-          et quelques découvertes.
-        </p>
-      </article>
-
-      <article>
-        <h3>Voyages</h3>
-        <p>
-          Irlande, Japon et récits de voyage,
-          entre expatriation et tourisme.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section contact">
-    <h2>Me retrouver</h2>
-
+  <nav class="navbar">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Accueil
+    </a>
+    <a routerLink="/voyages" routerLinkActive="active">
+      Voyages
+    </a>
+    <a routerLink="/jeux" routerLinkActive="active">
+      Jeux
+    </a>
+  </nav>
+  <router-outlet />
+  <footer class="footer">
     <p>
-      Ce site est un espace personnel où je partage mes projets,
-      mes découvertes et mes centres d'intérêt, mais vous pouvez également me retrouver sur ces sites :
+      Built with Angular • Hosted on OVHcloud • Made with ☕ by Chinto
     </p>
-
-    <div class="contact-links">
-      <a href="https://www.cyril-defaye.fr">Site pro</a>
-      <a href="mailto:contact@chinto.fr">Email</a>
-      <a href="https://github.com/chinjto">GitHub</a>
-      <a href="https://www.linkedin.com/in/cyrildefaye/">LinkedIn</a>
-    </div>
-  </section>
+  </footer>
 </main>
