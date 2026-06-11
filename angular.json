@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cyril-defaye-fr": {
+    "chinto-fr": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cyril-defaye-fr:build:production"
+              "buildTarget": "chinto-fr:build:production"
             },
             "development": {
-              "buildTarget": "cyril-defaye-fr:build:development"
+              "buildTarget": "chinto-fr:build:development"
             }
           },
           "defaultConfiguration": "development"
