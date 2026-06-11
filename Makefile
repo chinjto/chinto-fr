@@ -19,7 +19,7 @@ lint:
 	npm run lint
 
 preview: build
-	cd dist/cyril-defaye-fr/browser && python3 -m http.server 8080
+	cd dist/chinto-fr/browser && python3 -m http.server 8080
 
 version:
 	npm version $(VERSION) --no-git-tag-version
