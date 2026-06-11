@@ -1,21 +1,22 @@
 :host {
   display: block;
   min-height: 100vh;
+  background: var(--background);
 
   --white: #ffffff;
   --black: #000000;
   --dark-gray: #333333;
-  --light-gray: #f0f0f0;
+  --light-gray: #243341;
   --medium-gray: #444444;
   --gray: #5d5d5d;
   --dark-text: #414141;
-  --accent: #b58000;
+  --accent: #00a6b5;
 
-  --background: var(--white);
-  --surface: var(--light-gray);
-  --heading: var(--black);
-  --text: var(--dark-gray);
-  --muted: var(--gray);
+  --background: #101820;
+  --surface: #18242d;
+  --heading: #ffffff;
+  --text: #d7dee5;
+  --muted: #9aa8b3;
 }
 
 .page {
