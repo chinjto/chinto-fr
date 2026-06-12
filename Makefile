@@ -1,4 +1,4 @@
-.PHONY: build clean force-build run test lint preview deploy
+.PHONY: build clean force-build run test lint preview version deploy feature fix hotfix commit release
 
 build:
 	npm run build
@@ -24,14 +24,6 @@ preview: build
 version:
 	npm version $(VERSION) --no-git-tag-version
 
-release: version
-ifndef VERSION
-	$(error VERSION is required. Usage: make deploy VERSION=0.2.0)
-endif
-	git add package.json package-lock.json
-	git commit -m "chore(release): Release v$(VERSION)"
-	git tag -a v$(VERSION) -m "v$(VERSION)"
-
 deploy: build
 ifndef VERSION
 	$(error VERSION is required. Usage: make deploy VERSION=0.2.0)
@@ -41,9 +33,36 @@ endif
 	./scripts/deploy.sh
 	git checkout -
 
+feature:
+ifndef NAME
+	$(error NAME is required. Usage: make feature NAME=new-feature-name)
+endif
+	git checkout -b feat/$(NAME) develop
+
+fix:
+ifndef NAME
+	$(error NAME is required. Usage: make fix NAME=new-feature-name)
+endif
+	git checkout -b fix/$(NAME) develop
+
 hotfix:
 ifndef VERSION
 	$(error VERSION is required. Usage: make hotfix VERSION=0.2.1)
 endif
 	git checkout -b hotfix/v$(VERSION) master
 
+commit:
+	git add .
+ifdef MESSAGE
+	git commit -m $(MESSAGE)
+else
+	git commit
+endif
+
+release: version
+ifndef VERSION
+	$(error VERSION is required. Usage: make deploy VERSION=0.2.0)
+endif
+	git add package.json package-lock.json
+	git commit -m "chore(release): Release v$(VERSION)"
+	git tag -a v$(VERSION) -m "v$(VERSION)"
