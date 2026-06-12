@@ -14,9 +14,9 @@ export const routes: Routes = [
         .then(m => m.Travel)
   },
   {
-    path: 'jeux',
+    path: 'japon',
     loadComponent: () =>
-      import('./pages/gaming/gaming')
-        .then(m => m.Gaming)
+      import('./pages/japan/japan')
+        .then(m => m.Japan)
   }
 ];
