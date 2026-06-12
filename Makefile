@@ -40,3 +40,10 @@ endif
 	git merge --no-ff v$(VERSION) -m "Merge tag 'v$(VERSION)'"
 	./scripts/deploy.sh
 	git checkout -
+
+hotfix:
+ifndef VERSION
+	$(error VERSION is required. Usage: make hotfix VERSION=0.2.1)
+endif
+	git checkout -b hotfix/v$(VERSION) master
+
