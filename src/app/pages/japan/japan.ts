@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Meta, Title} from '@angular/platform-browser';
+import {Component} from '@angular/core';
+import {SeoService} from '../../services/seo';
 
 @Component({
   selector: 'app-japan',
@@ -10,26 +10,15 @@ import {Meta, Title} from '@angular/platform-browser';
 export class Japan {
 
   constructor(
-    private title: Title,
-    private meta: Meta
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
-    this.title.setTitle('Japon - Chinto');
-
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Japon - Des étagères de mangas à un vrai projet de vie'
-    });
-
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'Quatre voyages à travers le Japon...'
-    });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://www.chinto.fr/assets/og/japan.png'
+    this.seo.update({
+      title: 'Japon - Des étagères de mangas à un vrai projet de vie',
+      description: 'Quatre voyages à travers le Japon, de Tokyo à Kyūshū, et un projet de vie qui dépasse la simple passion du voyage.',
+      url: 'https://www.chinto.fr/japon',
+      image: 'https://www.chinto.fr/assets/og/japan.png',
     });
   }
 
