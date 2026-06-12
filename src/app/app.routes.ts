@@ -18,5 +18,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/japan/japan')
         .then(m => m.Japan)
+  },
+  {
+    path: 'jeux',
+    loadComponent: () =>
+      import('./pages/gaming/gaming')
+        .then(m => m.Gaming)
   }
 ];
