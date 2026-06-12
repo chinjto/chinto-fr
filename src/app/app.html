@@ -1,19 +1,5 @@
 <main class="page">
-  <nav class="navbar">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      Accueil
-    </a>
-    <a routerLink="/voyages" routerLinkActive="active">
-      Voyages
-    </a>
-    <a routerLink="/jeux" routerLinkActive="active">
-      Jeux
-    </a>
-  </nav>
+  <app-navbar />
   <router-outlet />
-  <footer class="footer">
-    <p>
-      Built with Angular • Hosted on OVHcloud • Made with ☕ by Chinto
-    </p>
-  </footer>
+  <app-footer />
 </main>
