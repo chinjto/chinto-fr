@@ -1,6 +1,6 @@
 {
   "name": "chinto-fr",
-  "version": "0.4.0",
+  "version": "0.5.0-beta",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
