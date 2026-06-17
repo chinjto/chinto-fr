@@ -1,5 +1,8 @@
 RewriteEngine On
 
+RewriteCond %{HTTP_HOST} ^chinto\.fr$ [NC]
+RewriteRule ^(.*)$ https://www.chinto.fr/$1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
