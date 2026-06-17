@@ -31,10 +31,10 @@ ng generate --help
 To build the project run:
 
 ```bash
-ng build
+npm run build:prerender
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This will compile and prerender the static site into the `dist/` directory. The deployable static files are in `dist/chinto-fr/browser`.
 
 ## Running unit tests
 
