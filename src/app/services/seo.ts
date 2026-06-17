@@ -16,7 +16,7 @@ type SeoConfig = {
 export class SeoService {
   private readonly siteName = 'Chinto';
   // TODO: replace with a generic site-wide OG image when one is available.
-  private readonly defaultImage = absoluteUrl('/assets/og/japan.png');
+  private readonly defaultImage = absoluteUrl('/assets/og/chinjto.jpeg');
 
   constructor(
     private readonly title: Title,
