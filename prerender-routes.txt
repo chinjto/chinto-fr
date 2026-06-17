@@ -1,5 +1,4 @@
 /
 /voyages
 /japon
-/projets
 /jeux
