@@ -1,4 +1,4 @@
-export type PageSeoKey = 'home' | 'travel' | 'japan' | 'gaming' | 'projects';
+export type PageSeoKey = 'home' | 'travel' | 'japan' | 'gaming';
 
 export type PageSeoConfig = {
   title: string;
@@ -19,30 +19,25 @@ export const pageSeo: Record<PageSeoKey, PageSeoConfig> = {
     type: 'website',
   },
   travel: {
-    title: 'Voyages - Découvertes, cultures et itinéraires',
+    title: 'Voyages - D\'un premier passeport à l\'envie de repartir',
     description: 'Carnets de voyage, découvertes culturelles et expériences à travers différents pays, avec une place particulière pour le Japon et l’Irlande.',
     path: '/voyages',
-    type: 'webtise',
+    image: '/assets/og/travels.png',
+    type: 'website',
   },
   japan: {
     title: 'Japon - Des étagères de mangas à un vrai projet de vie',
     description: 'Quatre voyages à travers le Japon, de Tokyo à Kyūshū, et un projet de vie qui dépasse la simple passion du voyage.',
     path: '/japon',
     image: '/assets/og/japan.png',
-    type: 'webtise',
+    type: 'website',
   },
   gaming: {
     title: 'Jeux vidéo - Univers, coopérations et aventures',
     description: 'Jeux vidéo, coopérations entre amis, expériences marquantes et univers qui ont accompagné mon parcours de joueur depuis des années.',
     path: '/jeux',
-    type: 'webtise',
-  },
-  projects: {
-    title: 'Projets — Chinto',
-    description: 'Projets personnels, expérimentations web, Linux, automatisation et open source.',
-    path: '/projets',
-    type: 'webtise',
-  },
+    type: 'website',
+  }
 };
 
 export function absoluteUrl(path: string): string {
