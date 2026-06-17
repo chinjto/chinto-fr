@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {SeoService} from '../../services/seo';
+import { PageSeoKey } from '../../services/page-seo';
 
 @Component({
   selector: 'app-travel',
@@ -10,16 +12,12 @@ import {SeoService} from '../../services/seo';
 export class Travel {
 
   constructor(
-    private seo: SeoService
+    private seo: SeoService,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
-    this.seo.update({
-      title: 'Voyages - Découvertes, cultures et itinéraires',
-      description: 'Carnets de voyage, découvertes culturelles et expériences à travers différents pays, avec une place particulière pour le Japon et l’Irlande.',
-      url: 'https://www.chinto.fr/voyages',
-      image: 'https://www.chinto.fr/assets/og/travels.png',
-    });
+    this.seo.updatePage(this.route.snapshot.data['seo'] as PageSeoKey);
   }
 
 }

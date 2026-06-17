@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {SeoService} from '../../services/seo';
+import { PageSeoKey } from '../../services/page-seo';
 
 @Component({
   selector: 'app-japan',
@@ -10,16 +12,12 @@ import {SeoService} from '../../services/seo';
 export class Japan {
 
   constructor(
-    private seo: SeoService
+    private seo: SeoService,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
-    this.seo.update({
-      title: 'Japon - Des étagères de mangas à un vrai projet de vie',
-      description: 'Quatre voyages à travers le Japon, de Tokyo à Kyūshū, et un projet de vie qui dépasse la simple passion du voyage.',
-      url: 'https://www.chinto.fr/japon',
-      image: 'https://www.chinto.fr/assets/og/japan.png',
-    });
+    this.seo.updatePage(this.route.snapshot.data['seo'] as PageSeoKey);
   }
 
 }

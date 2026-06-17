@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {SeoService} from '../../services/seo';
+import { PageSeoKey } from '../../services/page-seo';
 
 @Component({
   selector: 'app-gaming',
@@ -10,17 +12,12 @@ import {SeoService} from '../../services/seo';
 export class Gaming {
 
   constructor(
-    private seo: SeoService
+    private seo: SeoService,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
-    this.seo.update({
-      title: 'Jeux vidéo - Univers, coopérations et aventures',
-      description:
-        'Jeux vidéo, coopérations entre amis, expériences marquantes et univers qui ont accompagné mon parcours de joueur depuis des années.',
-      url: 'https://www.chinto.fr/jeux',
-      image: 'https://www.chinto.fr/assets/og/gaming.png',
-    });
+    this.seo.updatePage(this.route.snapshot.data['seo'] as PageSeoKey);
   }
 
 }
