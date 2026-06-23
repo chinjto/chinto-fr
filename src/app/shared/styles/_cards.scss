@@ -1,0 +1,21 @@
+article,
+.card {
+  padding: 20px;
+  background: var(--surface);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+article p,
+.card p,
+.contact p {
+  margin: 0;
+  line-height: 1.6;
+}

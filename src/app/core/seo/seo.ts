@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
 import {Meta, Title} from '@angular/platform-browser';
-import { absoluteUrl, PageSeoConfig, pageSeo, PageSeoKey } from './page-seo';
+import { absoluteUrl, PageSeoConfig, pageSeo, PageSeoKey } from '@core/seo/page-seo';
 
 type SeoConfig = {
   title: string;

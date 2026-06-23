@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {SeoService} from '../../services/seo';
-import { PageSeoKey } from '../../services/page-seo';
+import {SeoService} from '@core/seo/seo';
+import { PageSeoKey } from '@core/seo/page-seo';
 
 @Component({
   selector: 'app-japan',
