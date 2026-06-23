@@ -1,0 +1,11 @@
+<article class="card">
+  <h3>{{title()}}</h3>
+  <ng-content />
+  @if (tags().length > 0) {
+    <div class="tags">
+      @for (tag of tags(); track tag) {
+        <span class="tag">{{tag}}</span>
+      }
+    </div>
+  }
+</article>

@@ -1,0 +1,9 @@
+@use "index" as *;
+
+:host {
+  margin-bottom: 3em;
+}
+
+:host article {
+  height: 100%;
+}

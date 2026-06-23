@@ -1,4 +1,4 @@
-export type PageSeoKey = 'home' | 'travel' | 'japan' | 'gaming';
+export type PageSeoKey = 'home' | 'travel' | 'japan' | 'boardGames' | 'gaming';
 
 export type PageSeoConfig = {
   title: string;
@@ -30,6 +30,12 @@ export const pageSeo: Record<PageSeoKey, PageSeoConfig> = {
     description: 'Quatre voyages à travers le Japon, de Tokyo à Kyūshū, et un projet de vie qui dépasse la simple passion du voyage.',
     path: '/japon',
     image: '/assets/og/japan.png',
+    type: 'website',
+  },
+  boardGames: {
+    title: 'Jeux de société - Venez tous jouer autour d\'une table',
+    description: 'Entre stratégie, narration, bluff et coopération : découvrez les jeux de société qui m\'ont marqué et ceux que j\'attends avec impatience.',
+    path: '/jeux-de-société',
     type: 'website',
   },
   gaming: {

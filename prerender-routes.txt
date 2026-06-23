@@ -1,4 +1,5 @@
 /
 /voyages
 /japon
+/jeux-de-plateau
 /jeux

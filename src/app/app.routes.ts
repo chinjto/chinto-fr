@@ -30,6 +30,13 @@ export const routes: Routes = [
         .then(m => m.Japan)
   },
   {
+    path: 'jeux-de-société',
+    data: { seo: 'boardGames' },
+    loadComponent: () =>
+      import('./pages/board-games/board-games')
+        .then(m => m.BoardGames)
+  },
+  {
     path: 'jeux',
     data: { seo: 'gaming' },
     loadComponent: () =>
