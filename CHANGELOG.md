@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1
+
+- fix(prerender): Fix urls into prerender
+
 ## v1.1.0
 
 - feat(og): Set `Voyages` page preview picture
@@ -7,6 +11,7 @@
 - refactor(ui): Clean all app UI
 - feat(cards): Add info cards
 - feat(board-games): Add board games page
+- chore(changelog): Publish v1.1.0
 
 ## v1.0.0-beta.5
 
