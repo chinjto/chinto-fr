@@ -35,7 +35,7 @@ export const pageSeo: Record<PageSeoKey, PageSeoConfig> = {
   boardGames: {
     title: 'Jeux de société - Venez tous jouer autour d\'une table',
     description: 'Entre stratégie, narration, bluff et coopération : découvrez les jeux de société qui m\'ont marqué et ceux que j\'attends avec impatience.',
-    path: '/jeux-de-société',
+    path: '/jeux-de-societe',
     type: 'website',
   },
   gaming: {
