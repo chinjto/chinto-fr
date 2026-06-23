@@ -1,5 +1,5 @@
 /
 /voyages
 /japon
-/jeux-de-société
+/jeux-de-societe
 /jeux
