@@ -1,8 +1,13 @@
 # Changelog
 
+## v1.1.2
+
+- fix(board-games): Remove accents into page URL
+
 ## v1.1.1
 
 - fix(prerender): Fix urls into prerender
+- chore(changelog): Publish v1.1.1
 
 ## v1.1.0
 
