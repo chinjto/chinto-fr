@@ -1,0 +1,30 @@
+
+> chinto-fr@1.1.2 og
+> node .scripts/og-check.js http://localhost:4200/jeux-de-societe
+
+{
+  "success": true,
+  "ogTitle": "Jeux de société - Venez tous jouer autour d'une table",
+  "ogDescription": "Entre stratégie, narration, bluff et coopération : découvrez les jeux de société qui m'ont marqué et ceux que j'attends avec impatience.",
+  "ogUrl": "https://www.chinto.fr/jeux-de-societe",
+  "ogType": "website",
+  "ogSiteName": "Chinto",
+  "ogLocale": "fr_FR",
+  "twitterCard": "summary_large_image",
+  "twitterTitle": "Jeux de société - Venez tous jouer autour d'une table",
+  "twitterDescription": "Entre stratégie, narration, bluff et coopération : découvrez les jeux de société qui m'ont marqué et ceux que j'attends avec impatience.",
+  "ogImage": [
+    {
+      "url": "https://www.chinto.fr/assets/og/chinjto.jpeg",
+      "type": "jpeg"
+    }
+  ],
+  "twitterImage": [
+    {
+      "url": "https://www.chinto.fr/assets/og/chinjto.jpeg"
+    }
+  ],
+  "favicon": "/favicon.ico",
+  "charset": "utf-8",
+  "requestUrl": "http://localhost:4200/jeux-de-societe"
+}
