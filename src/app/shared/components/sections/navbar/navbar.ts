@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {Navigation} from '@core/navigation/navigation';
 
 @Component({
   selector: 'app-navbar',
@@ -11,5 +12,9 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   styleUrl: './navbar.scss',
 })
 export class Navbar {
+
+  constructor(
+    public navigation: Navigation
+  ) { }
 
 }

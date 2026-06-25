@@ -1,59 +1,68 @@
-# CyrilDefayeFr
+# chinto.fr
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Personal website and blog built with Angular.
 
-## Development server
+This project gathers my travels, hobbies, technical interests and, in the future, personal blog articles.
 
-To start a local development server, run:
+The goal is to build a fast, static website with a strong focus on maintainability, reusable components and good SEO practices.
+
+## Features
+
+- Content
+  - 🌍 Travel journal
+  - 🎮 Gaming
+  - 💻 Tech
+  - 📝 Blog
+- Technical chalenges
+  - 🔍 SEO & Open Graph metadata
+  - 📱 Responsive design
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+or, if available:
 
 ```bash
-ng generate component component-name
+make run
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Build
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Generate the static website:
 
 ```bash
 npm run build:prerender
 ```
 
-This will compile and prerender the static site into the `dist/` directory. The deployable static files are in `dist/chinto-fr/browser`.
+The generated files are available in:
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```text
+dist/chinto-fr/browser
 ```
 
-## Running end-to-end tests
+## Tech stack
 
-For end-to-end (e2e) testing, run:
+- [Angular:][angular] Typescript template for SPA developments
+- [Angular SSR:][angular-ssr] Rendering strategy (Server Side Rendering)
+- [SCSS:][scss] Overwrite of CSS language that provides more variables tools
+- [`@chinjto/generator-angular`:][@chinjto/generator-angular] Personnal schematics based components generator
 
-```bash
-ng e2e
-```
+## License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+This project is licensed under the MIT License.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[angular]:https://angular.dev/
+[angular-ssr]:https://v17.angular.io/guide/ssr
+[scss]:https://sass-lang.com/guide/
+[@chinjto/generator-angular]:https://github.com/chinjto/generator-angular

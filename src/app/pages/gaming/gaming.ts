@@ -1,7 +1,4 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {SeoService} from '@core/seo/seo';
-import { PageSeoKey } from '@core/seo/page-seo';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-gaming',
@@ -10,14 +7,5 @@ import { PageSeoKey } from '@core/seo/page-seo';
   styleUrl: './gaming.scss',
 })
 export class Gaming {
-
-  constructor(
-    private seo: SeoService,
-    private route: ActivatedRoute,
-  ) {}
-
-  ngOnInit(): void {
-    this.seo.updatePage(this.route.snapshot.data['seo'] as PageSeoKey);
-  }
 
 }

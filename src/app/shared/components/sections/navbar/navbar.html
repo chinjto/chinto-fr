@@ -1,14 +1,7 @@
 <nav class="navbar">
-  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Accueil
-  </a>
-  <a routerLink="/voyages" routerLinkActive="active">
-    Voyages
-  </a>
-  <a routerLink="/japon" routerLinkActive="active">
-    Japon
-  </a>
-  <a routerLink="/jeux-de-societe" routerLinkActive="active">
-    Jeux de société
-  </a>
+  @for (route of navigation.routes(); track route.link) {
+    <a [routerLink]="route.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      {{route.label}}
+    </a>
+  }
 </nav>

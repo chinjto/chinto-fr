@@ -1,13 +1,14 @@
 {
   "name": "chinto-fr",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:prerender": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "og": "node .scripts/og-check.js"
   },
   "prettier": {
     "overrides": [
@@ -29,7 +30,6 @@
     "@angular/platform-server": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@angular/ssr": "^20.0.0",
-    "@chinjto/generator-angular": "^1.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -37,6 +37,7 @@
     "@angular/build": "^20.0.5",
     "@angular/cli": "^20.0.5",
     "@angular/compiler-cli": "^20.0.0",
+    "@chinjto/generator-angular": "^1.2.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
@@ -44,6 +45,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "open-graph-scraper": "^6.11.0",
     "typescript": "~5.8.2"
   }
 }
