@@ -22,6 +22,7 @@
             "server": "src/main.server.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "outputMode": "static",
             "assets": [
               {
                 "glob": "**/*",
