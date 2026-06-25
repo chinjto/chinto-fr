@@ -1,8 +1,18 @@
 # Changelog
 
+## v1.2.0
+
+- build(angular): Update `@chinjto/generator-angular`
+- docs(reamde): Clean readme and todo list
+- fix(seo): Change locale to fr_FR
+- feat(seo): Migration to cyril-defaye.fr implementation
+- feat(navbar): Move routes data into new navigation service
+- feat(navigation): Plug navigation route to app route
+
 ## v1.1.2
 
 - fix(board-games): Remove accents into page URL
+- chore(changelog): Publish v1.1.2
 
 ## v1.1.1
 
@@ -65,7 +75,6 @@
 
 ## v0.4.0
 
-- wip(todo): Add blog roadmap
 - feat(make): Improve hotfix workflox
 - Merge tag 'v0.3.1'
 - feat(make): Improve gitflow

@@ -20,10 +20,6 @@
           "options": {
             "browser": "src/main.ts",
             "server": "src/main.server.ts",
-            "prerender": {
-              "routesFile": "prerender-routes.txt",
-              "discoverRoutes": false
-            },
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
