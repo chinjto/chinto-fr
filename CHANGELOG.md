@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1
+
+- fix(prerender): Add missing Angular property
+
 ## v1.2.0
 
 - build(angular): Update `@chinjto/generator-angular`
@@ -8,6 +12,7 @@
 - feat(seo): Migration to cyril-defaye.fr implementation
 - feat(navbar): Move routes data into new navigation service
 - feat(navigation): Plug navigation route to app route
+- chore(changelog): Publish v1.2.0
 
 ## v1.1.2
 
