@@ -1,44 +1,27 @@
 import {computed, Injectable, signal} from '@angular/core';
 import {NavigationMetadata} from '@core/navigation/navigation-metadata';
+import {routes} from '@app/app.routes';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class Navigation {
 
-  private _navigation: NavigationMetadata[] = [
-    {
-      label: "Accueil",
-      order: 10,
-      isVisible: true,
-      link: '/'
-    },
-    {
-      label: "Voyages",
-      order: 20,
-      isVisible: true,
-      link: '/voyages'
-    },
-    {
-      label: "Japon",
-      order: 30,
-      isVisible: true,
-      link: '/japon'
-    },
-    {
-      label: "Jeux de société",
-      order: 40,
-      isVisible: true,
-      link: '/jeux-de-societe'
-    }
-  ];
-
-  private readonly _routes = signal(this._navigation);
-
   readonly routes = computed(() =>
-    this._routes()
-      .filter(route => route.isVisible)
+    routes
+      .filter(route => route.data?.['navigation'])
+      .map(route => {
+        const navigation = route.data!['navigation'] as NavigationMetadata;
+
+        return {
+          ...navigation,
+          link: navigation.link ?? this.toRouteLink(route.path),
+        };
+      })
+      .filter(route => route.isVisible !== false)
       .sort((a, b) => a.order - b.order)
   );
+
+  private toRouteLink(path?: string): string {
+    return path ? `/${path}` : '/';
+  }
 
 }
