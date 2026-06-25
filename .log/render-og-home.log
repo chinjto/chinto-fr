@@ -1,6 +1,6 @@
 
-> chinto-fr@1.1.2 og
-> node .scripts/og-check.js http://localhost:4200
+> chinto-fr@1.2.0 og
+> node .scripts/og-check.js http://localhost:8080
 
 {
   "success": true,
@@ -26,5 +26,5 @@
   ],
   "favicon": "/favicon.ico",
   "charset": "utf-8",
-  "requestUrl": "http://localhost:4200"
+  "requestUrl": "http://localhost:8080"
 }
