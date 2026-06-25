@@ -1,5 +1,3 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -16,12 +14,27 @@
     "module": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@app/*": ["app/*"],
-      "@core/*": ["app/core/*"],
-      "@pages/*": ["app/pages/*"],
-      "@sections/*": ["app/shared/components/sections/*"],
-      "@cards/*": ["app/shared/components/cards/*"],
-      "@tiles/*": ["app/shared/components/tiles/*"]
+      "@app/*": [
+        "app/*"
+      ],
+      "@core/*": [
+        "app/core/*"
+      ],
+      "@pages/*": [
+        "app/pages/*"
+      ],
+      "@sections/*": [
+        "app/shared/components/sections/*"
+      ],
+      "@cards/*": [
+        "app/shared/components/cards/*"
+      ],
+      "@tiles/*": [
+        "app/shared/components/tiles/*"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ]
     }
   },
   "angularCompilerOptions": {
