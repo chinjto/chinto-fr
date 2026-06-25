@@ -101,6 +101,7 @@
   },
   "cli": {
     "schematicCollections": [
+      "@schematics/angular",
       "@chinjto/generator-angular"
     ]
   }
