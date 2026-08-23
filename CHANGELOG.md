@@ -1,8 +1,13 @@
 # Changelog
 
+## v1.3.0
+
+- feat(updates): Update content on actual situation
+
 ## v1.2.1
 
 - fix(prerender): Add missing Angular property
+- chore(changelog): Publish v1.2.1
 
 ## v1.2.0
 
