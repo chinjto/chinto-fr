@@ -3,5 +3,6 @@ export interface Article {
   title: string;
   summary: string;
   content: string;
+  tags: string[];
   publishedAt: Date;
 }

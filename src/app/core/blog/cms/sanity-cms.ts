@@ -17,6 +17,7 @@ interface SanityArticle {
   title: string;
   summary: string;
   content: string;
+  tags: string[];
   publishedAt: string;
 }
 
@@ -26,6 +27,7 @@ function _toArticle(article: SanityArticle): Article {
     title: article.title,
     summary: article.summary,
     content: article.content,
+    tags: article.tags,
     publishedAt: new Date(article.publishedAt),
   };
 }
@@ -40,6 +42,7 @@ export class SanityCms implements Cms {
           *[_type == "article"] | order(publishedAt desc) {
             "slug": slug.current,
             title,
+            tags,
             summary,
             publishedAt
           }
@@ -55,6 +58,7 @@ export class SanityCms implements Cms {
           *[_type == "article" && slug.current == $slug][0] {
             "slug": slug.current,
             title,
+            tags,
             summary,
             content,
             publishedAt

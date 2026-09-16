@@ -12,7 +12,7 @@
   @for(article of articles.all(); track article.slug) {
   <p></p>
 
-  <card-info [title]="article.title" [tags]="[(article.publishedAt|date) ?? '']">
+  <card-info [title]="article.title" [tags]="tags(article)">
     <p>
       {{article.summary}}
     </p>

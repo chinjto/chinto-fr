@@ -6,7 +6,11 @@
     {{article()?.summary}}
   </p>
   <p></p>
-  <div class="tags"><span class="tag">{{(article()?.publishedAt)|date}}</span></div>
+  <div class="tags">
+    @for(tag of tags(article()); track tag){
+    <span class="tag">{{tag}}</span>
+    }
+  </div>
   <p></p>
 </section>
 
