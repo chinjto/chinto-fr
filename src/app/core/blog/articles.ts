@@ -12,7 +12,7 @@ export class Articles {
     return this.cms.articles();
   }
 
-  one(slug: string): Signal<Article> {
+  one(slug: string): Signal<Article|undefined> {
     return this.cms.article(slug);
   }
 

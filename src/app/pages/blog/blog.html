@@ -17,7 +17,7 @@
       {{article.summary}}
     </p>
     <p>
-      <a href="./{{article.slug}}">En savoir plus.</a>
+      <a [routerLink]="[`/blog/${article.slug}`]">En savoir plus.</a>
     </p>
   </card-info>
   }

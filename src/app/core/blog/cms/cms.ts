@@ -5,6 +5,6 @@ export interface Cms {
 
   articles(): Signal<Article[]>;
 
-  article(slug: string): Signal<Article>;
+  article(slug: string): Signal<Article|undefined>;
 
 }

@@ -16,6 +16,7 @@ interface SanityArticle {
   slug: string;
   title: string;
   summary: string;
+  content: string;
   publishedAt: string;
 }
 
@@ -24,6 +25,7 @@ function _toArticle(article: SanityArticle): Article {
     slug: article.slug,
     title: article.title,
     summary: article.summary,
+    content: article.content,
     publishedAt: new Date(article.publishedAt),
   };
 }
@@ -42,14 +44,25 @@ export class SanityCms implements Cms {
             publishedAt
           }
         `)
-        .then(articles => {
-          this._articles.set(articles.map(_toArticle));
-        });
+        .then(articles => this._articles.set(articles.map(_toArticle)));
       return this._articles.asReadonly();
   }
 
-  article(slug: string): Signal<Article> {
-      throw new Error("Method not implemented.");
+  article(slug: string): Signal<Article|undefined> {
+      const article = signal<Article|undefined>(undefined);
+      sanityClient.fetch(
+        `
+          *[_type == "article" && slug.current == $slug][0] {
+            "slug": slug.current,
+            title,
+            summary,
+            content,
+            publishedAt
+          }
+        `,
+        {slug}
+      ).then(cmsArticle => article.set(_toArticle(cmsArticle)));
+      return article.asReadonly();
   }
 
 }
