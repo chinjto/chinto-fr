@@ -1,0 +1,24 @@
+<section class="hero">
+  <p class="eyebrow">Venez suivre mon actualité</p>
+  <h1>Actualité</h1>
+
+  <p class="intro">
+    Parce que certains sujets dont j'ai envie de parler ne nécessitent pas forcément une page dédiée, je vous propose cette
+    page qui vous permettra de suivre pleins de petits sujets dont je souhaite vous parler, à travers le temps.
+  </p>
+</section>
+
+<section>
+  @for(article of articles.all(); track article.slug) {
+  <p></p>
+
+  <card-info [title]="article.title" [tags]="[(article.publishedAt|date) ?? '']">
+    <p>
+      {{article.summary}}
+    </p>
+    <p>
+      <a href="./{{article.slug}}">En savoir plus.</a>
+    </p>
+  </card-info>
+  }
+</section>
