@@ -1,11 +1,12 @@
-import {ChangeDetectionStrategy, Component, computed, effect, inject, input, signal, Signal} from '@angular/core';
-import {Article} from '@core/blog/article';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import {Articles} from '@core/blog/articles';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {MarkdownPipe} from '@core/pipes/markdown/markdown-pipe';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'page-details',
-  imports: [],
+  imports: [MarkdownPipe, DatePipe, RouterLink],
   templateUrl: './details.html',
   styleUrl: './details.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

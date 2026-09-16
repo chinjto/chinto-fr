@@ -31,6 +31,7 @@
     "@angular/router": "^20.0.0",
     "@angular/ssr": "^20.0.0",
     "@sanity/client": "^7.27.0",
+    "markdown-it": "^15.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

@@ -1,12 +1,14 @@
 <section class="hero">
-  <p class="eyebrow">Les articles de Chinto</p>
+  <p class="eyebrow"><a [routerLink]="['/blog']">&lt;&lt; Les articles de Chinto</a></p>
   <h1>{{article()?.title}}</h1>
 
   <p class="intro">
     {{article()?.summary}}
   </p>
+  <p></p>
+  <div class="tags"><span class="tag">{{(article()?.publishedAt)|date}}</span></div>
+  <p></p>
 </section>
 
-<section>
-  {{article()?.content}}
+<section [innerHTML]="article()?.content | markdown">
 </section>
