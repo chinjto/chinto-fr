@@ -1,6 +1,7 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {withSeoMetadata} from '@core/seo/seo-metadata';
 import {withNavigationMetadata} from '@core/navigation/navigation-metadata';
+import {articleSeo} from '@core/blog/article-seo';
 
 export const routes: Routes = [
   {
@@ -96,5 +97,33 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/gaming/gaming')
         .then(m => m.Gaming)
+  },
+  {
+    path: 'blog',
+    data: {
+      ...withSeoMetadata({
+        title: 'Blog - Quoi de neuf chez moi ?',
+        description: 'Actualité personnelle, nouveaux sujets, venez découvrir mon actualité à travers mes billets du moment.',
+        canonicalPath: '/blog',
+      }),
+      ...withNavigationMetadata({
+        label: 'Actualité',
+        order: 60,
+        isVisible: true,
+        link: '/blog'
+      })
+    },
+    loadComponent: () =>
+      import('./pages/blog/blog')
+        .then(m => m.Blog)
+  },
+  {
+    path: 'blog/:slug',
+    resolve: {
+      seo: articleSeo
+    },
+    loadComponent: () =>
+      import('./pages/blog/details/details')
+        .then(m => m.Details),
   }
 ];
