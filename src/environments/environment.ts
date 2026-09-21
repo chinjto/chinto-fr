@@ -3,7 +3,7 @@ export const environment = {
 
   sanity: {
     projectId: 'msozvpkg',
-    dataset: 'production',
+    dataset: 'development',
     apiVersion: '2026-09-16',
     useCdn: true
   }
