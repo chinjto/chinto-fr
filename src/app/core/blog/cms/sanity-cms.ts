@@ -63,11 +63,15 @@ export class SanityCms implements Cms {
   async metadata(slug: string): Promise<{
     title: string;
     summary: string;
+    publishedAt: string;
+    tags: string[]
   }> {
     return sanityClient.fetch(`
     *[_type == "article" && slug.current == $slug][0] {
       title,
-      summary
+      summary,
+      publishedAt,
+      tags
     }
   `, {slug});
   }

@@ -5,6 +5,12 @@ export const DEFAULT_OG_IMAGE = '/assets/og/chinjto.jpeg';
 export const SITE_NAME = 'Chinto';
 export const LOCALE = 'fr_FR';
 
+interface ArticleMetadata {
+  author: string;
+  published_time: string;
+  tags: string[];
+}
+
 export interface SeoMetadata {
   title: string;
   description: string;
@@ -13,6 +19,7 @@ export interface SeoMetadata {
   ogImage?: string;
   ogType?: string;
   canonicalPath?: string;
+  ogArticle?: ArticleMetadata;
 }
 
 export interface SeoRouteData {
