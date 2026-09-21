@@ -1,16 +1,7 @@
 import {Injectable, Signal, signal} from '@angular/core';
 import {Cms} from '@core/blog/cms/cms';
-import { Article } from "../article";
-import {createClient} from '@sanity/client';
-
-// TODO à bousculer dans des variables de déploiement
-// rien de sensible car publique (peut partir sur Github), mais plus propre de le variabiliser par env'
-export const sanityClient = createClient({
-  projectId: 'msozvpkg',
-  dataset: 'production',
-  apiVersion: '2026-09-16',
-  useCdn: true
-});
+import {Article} from "../article";
+import {sanityClient} from './sanity-client';
 
 interface SanityArticle {
   slug: string;
@@ -67,6 +58,18 @@ export class SanityCms implements Cms {
         {slug}
       ).then(cmsArticle => article.set(_toArticle(cmsArticle)));
       return article.asReadonly();
+  }
+
+  async metadata(slug: string): Promise<{
+    title: string;
+    summary: string;
+  }> {
+    return sanityClient.fetch(`
+    *[_type == "article" && slug.current == $slug][0] {
+      title,
+      summary
+    }
+  `, {slug});
   }
 
 }

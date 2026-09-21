@@ -1,7 +1,7 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {withSeoMetadata} from '@core/seo/seo-metadata';
 import {withNavigationMetadata} from '@core/navigation/navigation-metadata';
-import {Details} from '@pages/blog/details/details';
+import {articleSeo} from '@core/blog/article-seo';
 
 export const routes: Routes = [
   {
@@ -119,12 +119,8 @@ export const routes: Routes = [
   },
   {
     path: 'blog/:slug',
-    data: {
-      ...withSeoMetadata({ // TODO le rendre dynamique, mais garder le prerender
-        title: 'Blog - Quoi de neuf chez moi ?',
-        description: 'Actualité personnelle, nouveaux sujets, venez découvrir mon actualité à travers mes billets du moment.',
-        canonicalPath: '/blog/:slug',
-      })
+    resolve: {
+      seo: articleSeo
     },
     loadComponent: () =>
       import('./pages/blog/details/details')
