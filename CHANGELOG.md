@@ -1,8 +1,21 @@
 # Changelog
 
+## v1.4.0
+
+- feat(blog): Add blog page
+- feat(blog): Implement sanity CMS service
+- feat(blog): Add details
+- feat(blog): Add Markdown render
+- feat(blog): Add tags
+- feat(blog): Add Route & SEO prerenders
+- fix(blog): Externalize Sanity properties
+- feat(blog): Add SEO article
+- fix(env): Deploy PROD env on PROD
+
 ## v1.3.0
 
 - feat(updates): Update content on actual situation
+- chore(changelog): Publish v1.3.0
 
 ## v1.2.1
 
