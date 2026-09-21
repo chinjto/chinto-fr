@@ -35,6 +35,7 @@ export class SeoService {
     const ogDescription = seo.ogDescription ?? description;
     const canonicalUrl = this.toAbsoluteUrl(canonicalPath);
     const ogImage = this.toAbsoluteUrl(seo.ogImage ?? DEFAULT_OG_IMAGE);
+    const ogArticle = seo.ogArticle;
 
     this.title.setTitle(seo.title);
     this.updateCanonicalLink(canonicalUrl);
@@ -52,6 +53,19 @@ export class SeoService {
     this.meta.updateTag({ property: 'twitter:title', content: ogTitle });
     this.meta.updateTag({ property: 'twitter:description', content: ogDescription });
     this.meta.updateTag({ property: 'twitter:image', content: ogImage });
+
+    if (ogArticle) {
+      this.meta.updateTag({ property: 'article:author', content: ogArticle.author });
+      this.meta.updateTag({ property: 'article:published_time', content: ogArticle.published_time });
+      this.meta.removeTag('property="article:tag"');
+      for (const tag of ogArticle.tags ?? []) {
+        this.meta.addTag({ property: 'article:tag', content: tag });
+      }
+    } else {
+      this.meta.removeTag('property="article:author"');
+      this.meta.removeTag('property="article:published_time"');
+      this.meta.removeTag('property="article:tag"');
+    }
   }
 
   private getDeepestRoute(route: ActivatedRouteSnapshot): ActivatedRouteSnapshot {
