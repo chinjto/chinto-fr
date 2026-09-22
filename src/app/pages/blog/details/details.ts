@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, PLATFORM_ID} from '@angular/core';
 import {Articles} from '@core/blog/articles';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {MarkdownPipe} from '@core/pipes/markdown/markdown-pipe';
-import {formatDate} from '@angular/common';
+import {formatDate, isPlatformBrowser} from '@angular/common';
 import {Article} from '@core/blog/article';
 
 @Component({
@@ -13,6 +13,14 @@ import {Article} from '@core/blog/article';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Details {
+
+  private readonly platformId = inject(PLATFORM_ID);
+
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      import('@mdit/plugin-tab/register-tab');
+    }
+  }
 
   private readonly articles = inject(Articles);
   private readonly route = inject(ActivatedRoute);
